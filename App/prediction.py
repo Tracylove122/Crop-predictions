@@ -16,7 +16,6 @@ with open('App/best_model_random_forest.pkl', "rb") as f:
     model = pickle.load(f) 
 
 
-
 def pred_page():
     df = pd.read_csv('App/Actual_df.csv')
 
