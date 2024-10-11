@@ -11,22 +11,20 @@ st.set_page_config(
     page_title="PredictPrice"
 )
 
-# Sidebar menu
 with st.sidebar:
     selected = option_menu(
         menu_title=None,
         options=["Home", "Prediction", "Dashboard"],
-        icons=["house", "🔮 Prediction", "📊 Dashboard"], 
+        icons=["house", "pair of dice", "line graph"], 
         menu_icon="cast",
     )
     
-# Display home page if selected
+
 if selected == "Home":
    home_page()
 
-# Prediction Page with Sidebar Inputs
 elif selected == "Prediction":
     pred_page()
 
-elif selected == "Dashboard":
+else:
     dashboard_page()

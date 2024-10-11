@@ -58,5 +58,3 @@ def home_page():
               We hope this tool helps you achieve better insights and optimize your crop production.""")
 
 
-if __name__ == "__main__":
-    home_page()
