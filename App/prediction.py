@@ -5,19 +5,19 @@ import pickle
 from sqlalchemy import create_engine, text
 
 
-with open('App/encoded_soil_type_crop_type_location.pkl', "rb") as f:
+with open('encoded_soil_type_crop_type_location.pkl', "rb") as f:
     encoder = pickle.load(f)
 
 
-with open('App/scaler.pkl', "rb") as f:
+with open('scaler.pkl', "rb") as f:
     scaler = pickle.load(f)
 
-with open('App/best_model_random_forest.pkl', "rb") as f:
+with open('best_model_random_forest.pkl', "rb") as f:
     model = pickle.load(f) 
 
 
 def pred_page():
-    df = pd.read_csv('App/Actual_df.csv')
+    df = pd.read_csv('Actual_df.csv')
 
     with st.expander("My DataFrame"):
       st.dataframe(df.head())
